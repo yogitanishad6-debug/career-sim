@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerSim – Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>CareerSim (Prototype)</h1>
+      <div id="userTag"></div>
+    </header>
+
+    <main id="main">
+      <!-- Onboarding -->
+      <section id="onboard" class="card">
+        <h2>Welcome! Start here</h2>
+        <label>Nick name<input id="name" placeholder="Your name"/></label>
+        <label>Birth year<input id="birth" placeholder="e.g. 2010" type="number"/></label>
+
+        <div>
+          <h3>Pick a career family you like</h3>
+          <div class="choices" id="families">
+            <!-- JS will inject -->
+          </div>
+        </div>
+
+        <button id="startBtn">Start Exploring</button>
+      </section>
+
+      <!-- Dashboard / Game -->
+      <section id="game" class="hidden">
+        <div class="flex">
+          <aside class="card narrow">
+            <h3>Profile</h3>
+            <div id="profileInfo"></div>
+            <h4>Skill Meters</h4>
+            <div id="skills"></div>
+            <h4>Badges</h4>
+            <div id="badges"></div>
+          </aside>
+
+          <section class="card grow">
+            <div id="mentor" class="mentor card">
+              <strong>Mentor:</strong>
+              <div id="mentorText"></div>
+            </div>
+
+            <div id="missions">
+              <h3>Missions</h3>
+              <div id="missionList"></div>
+            </div>
+
+            <div id="dashboard">
+              <h3>Career Readiness Dashboard</h3>
+              <div id="readiness"></div>
+              <button id="export">Save Portfolio (Download JSON)</button>
+              <button id="reset">Reset Progress</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Tiny modal for messages -->
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <footer>
+      Prototype — free, client-side. Host on GitHub Pages.
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
